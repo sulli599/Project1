@@ -1,0 +1,9 @@
+#!/bin/bash
+#SBATCH -N 30
+#SBATCH --ntasks-per-node 1
+#SBATCH --time 00:03:00
+#SBATCH --mem 15gb
+
+qsub bowtie.qsub
+
+scontrol show job $SLURM_JOB_ID
