@@ -54,10 +54,7 @@ int main() {
 		for (int x = 0; x<strlen(start); x++) {
 			if (x==(strlen(start)-1)) {
 				dobreak = 1;
-				#pragma omp critical 
-				{
-				poss[id] = i;
-				}
+				poss[id] = i;		
 			}
 			if (gnm[i+x] != start[x]) 
 				break;
